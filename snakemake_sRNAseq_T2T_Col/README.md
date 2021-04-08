@@ -17,14 +17,7 @@ This is a Snakemake workflow for automated processing and alignment of small RNA
 These files can be downloaded together by cloning the repository:
 
 ```
-git clone https://github.com/ajtock/sRNAseq_leaf_Rigal_Mathieu_2016_PNAS/snakemake_sRNAseq_T2T_Col.git
-
-```
-
-Alternatively, individual files (e.g., `Snakefile`) can be downloaded using `wget`:
-
-```
-wget https://raw.githubusercontent.com/ajtock/sRNAseq_leaf_Rigal_Mathieu_2016_PNAS/snakemake_sRNAseq_T2T_Col/Snakefile
+git clone https://github.com/ajtock/sRNAseq_leaf_Rigal_Mathieu_2016_PNAS.git
 ```
 
 ### Creating the conda environment
