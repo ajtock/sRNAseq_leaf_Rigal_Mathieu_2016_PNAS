@@ -32,7 +32,6 @@ In a Unix shell, navigate to the base directory containing `Snakefile`, `config.
 
 ```
 .
-├── condor_submit.sh
 ├── config.yaml
 ├── contaminants
 │   ├── ribokmers.fa.gz
