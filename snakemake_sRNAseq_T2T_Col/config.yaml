@@ -1,0 +1,33 @@
+SAMPLES:
+      ["Col_0_sRNA_ERR966148",
+       "met1_3_sRNA_ERR966149"]
+THREADS: 48
+MEMORY: "500g"
+FILTER:
+  bbduk:
+      kmerSize: 18
+      rRNAfasta: "contaminants/ribokmers.fa.gz"
+  cutadapt:
+      adapter: TGGAATTCTCGGGTGCCAAGG # -a (TruSeq small RNA adapter)
+#      adapter: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC # -a (adapter from NEBNext Multiplex Small RNA Library Prep Kit for Illumina)
+      quality-filter: 20 # -q
+      minimum-overlap: 3 # -O (default: 3)
+      minimum-length: 15 # -m
+      maximum-length: 43 # -M
+      extra-params:
+# NOTE: reference genome-specific mapping parameters
+MAPPING:
+      # -k 1 (default): Report up to <int> valid alignments per read
+      mode: "both" # (both unique and multiple alignments: --best) (unique: -m 1)
+      mismatches: 0 # -v <int>
+      reference: "data/index/T2T_Col"
+      sortMemory: "5G"
+# Specify small RNA sizes based on trimmed FastQC "Sequence Length Distribution"
+sRNA_SIZE: 18 # [18, 19, 20, 21, 22, 23, 24, 25, 26]
+sRNA_SIZES: [18, 19, 20, 21, 22, 23, 24, 25, 26]
+COVERAGE:
+      normalizeUsing: "BPM"
+      ignoreForNormalization: "ChrM ChrC" # Reference genome-specific parameter
+      binSize: 1
+      genomeBinSize: 10000
+      genomeBinName: "10kb"
