@@ -1,0 +1,26 @@
+THREADS: 24
+SAMPLE: [
+         "Col_0_sRNA_ERR966148",
+         "met1_3_sRNA_ERR966149"
+        ]
+FEATURES:
+      chrName: [
+                "Chr1_Chr2_Chr3_Chr4_Chr5",
+                "Chr1",
+                "Chr4",
+                "Chr5"
+               ]
+MAPPING:
+      mode: "both"
+      reference: "data/index/t2t-col.20210610"
+sRNA_SIZES: [21, 22, 24]
+COVERAGE:
+      regionBodyLength: 2000
+      startLabel: "Start"
+      endLabel: "End"
+      upstream: 2000
+      downstream: 2000
+      flankName: "2kb"
+      binSize: 10
+      binName: "10bp"
+      sortRegions: "keep"
