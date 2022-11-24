@@ -1,0 +1,18 @@
+# pwd : /home/ajt200/analysis/sRNAseq_leaf_Rigal_Mathieu_2016_PNAS/snakemake_sRNAseq_t2t-col.20210610
+
+Universe   = vanilla
+Executable = /bin/bash
+Transfer_executable = False
+should_transfer_files = NO
+Arguments = "/home/ajt200/analysis/sRNAseq_leaf_Rigal_Mathieu_2016_PNAS/snakemake_sRNAseq_t2t-col.20210610/condor_submit.sh"
+Requirements = OpSys == "LINUX" && Arch == "X86_64"  && TARGET.FileSystemDomain == "plantsci.internal.cam.ac.uk"
+rank = -LoadAvg
+request_memory = 200000
+request_cpus = 38
+getenv = True
+Log = log-2021-06-11_23-50-21.txt
+Input = 
+Output = stdout-2021-06-11_23-50-21.txt
+Error = error-2021-06-11_23-50-21.txt
+Notification = never
+Queue
